@@ -8,23 +8,30 @@ Our initial analysis was designed to retrieve the last 12 months of precipitatio
 
 ## Analysis
 
-The data base called : **hawaii.sqlite** has two tables: `Measurement` and `Station`, which contains all the information about precipitation and temperatures measured yearly across a vast area covered by several weather stations. The first step in our analysis is to access to these tables by using the method `prepare` and saving in our framework their references by using their corresponding methods:  `_.classes.measurement` and `-.classes.station`.
+The data base called : **hawaii.sqlite** has two tables: `Measurement` and `Station`, which contains all the information about precipitation and temperatures measured yearly across a vast area covered by several weather stations. The first step in our analysis is to access to these tables by using the method `prepare` and saving in our framework their references by using their corresponding methods:  `_.classes.measurement` and `-.classes.station`.  Once we have the references to the two tables, we need to access them to retrieve all the temperatures for the month of June and December. Those temperatures are stored in Python as a list  in order to create a Dataframe and generate a summary statistics. The code written in jupyter notebook is shown in  [SurfsUp_Challenge.ipynb](https://github.com/LeidyDoradoM/SurfsUp_Challenge/blob/main/SurfsUp_Challenge.ipynb) as deliverable 1 and 2. The summary statistics are shown below:
 
-### Summary Statistics for June
+| June Temps | Dec Temps |
+| --- | ----------- |
+| ![June](https://raw.githubusercontent.com/LeidyDoradoM/SurfsUp_Challenge/main/Resources/df_JuneStats.png) | ![Dec](https://raw.githubusercontent.com/LeidyDoradoM/SurfsUp_Challenge/main/Resources/df_DecStats.png) |
 
-Once we have the references to the two tables, we need to access them to retrieve all the temperatures for the month of June. Those temperatures are stored in Python as a list  in order to create a Dataframe and generate a summary statistics. The code written in jupyter notebook is shown in  [SurfsUp_Challenge.ipynb](https://github.com/LeidyDoradoM/SurfsUp_Challenge/blob/main/SurfsUp_Challenge.ipynb) as deliverable 1. The summary statistics are shown below:
+Figure 1. Statistics for June and December
 
-![June](https://raw.githubusercontent.com/LeidyDoradoM/SurfsUp_Challenge/main/Resources/df_JuneStats.png)
+### 1. Minimum Temperature for June and December
 
-Figure 1. Statistics for June
+Miminum temperatures for June  and December differ in about 8 degrees, which shows how some day in December could reach lower temperatures than summer months as June.
 
-### Summary Statistics for December
+### 2. Range of Temperatures for June and December
 
-The same process is followed to get the temperatures for the month of December.  Likewise, the [SurfsUp_Challenge.ipynb](https://github.com/LeidyDoradoM/SurfsUp_Challenge/blob/main/SurfsUp_Challenge.ipynb) shows the code as deliverable 2 and the summary of the statistics for this month are shown below:
+Although the minimum temperatures between the two months (June-December) differ for almost 10 degrees, the maximum temperatures are very similar (i.e. they differ only in 2 degrees). This means that the range of temperatures for December is wider compared with the month of June.  Likewise, this can be seen in their values for the standard deviation, **std**, where December has a larger value for the std.
 
-![Dec](https://raw.githubusercontent.com/LeidyDoradoM/SurfsUp_Challenge/main/Resources/df_DecStats.png)
+### 3. Percentiles for June and December
 
-Figure 2. Statistics for December
+Regarding the percentiles, the second quartile (50%) for June is 75F and the third quartile (75%) for December is about the same 74F.  This shows how for the month of December only about 7 or 8 days have temperatures above 74F while in June the double of days have temperatures in the upper part of the 70s degrees.
 
 ## Summary
 
+From our analysis we can conclude that 
+Precipitation Queries f
+| June Temps | Dec Temps |
+| --- | ----------- |
+| ![June](https://raw.githubusercontent.com/LeidyDoradoM/SurfsUp_Challenge/main/Resources/df_prcpJuneStats.png) | ![Dec](https://raw.githubusercontent.com/LeidyDoradoM/SurfsUp_Challenge/main/Resources/df_prcpDecStats.png) |
